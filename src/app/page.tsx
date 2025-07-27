@@ -19,7 +19,7 @@ export default function Home() {
         </Link>
         <Link href="/admin" className="block p-6 bg-blue-50 border border-blue-200 rounded-lg shadow hover:bg-blue-100">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-blue-800">Admin Dashboard</h5>
-          <p className="font-normal text-gray-700">Access the landlord's dashboard.</p>
+          <p className="font-normal text-gray-700">Access the landlord dashboard.</p>
         </Link>
       </div>
     </div>
