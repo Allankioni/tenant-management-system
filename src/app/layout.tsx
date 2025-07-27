@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import PanicButton from "@/components/PanicButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +26,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        {children}
+        <header className="bg-blue-600 text-white p-4 shadow-md">
+          <div className="container mx-auto">
+            <h1 className="text-2xl font-bold">Tenant Management System</h1>
+          </div>
+        </header>
+        <main className="flex-grow container mx-auto p-4">{children}</main>
+        <PanicButton />
+        <footer className="bg-blue-600 text-white p-4 text-center">
+          <p>&copy; 2024 Tenant Management System</p>
+        </footer>
       </body>
     </html>
   );
